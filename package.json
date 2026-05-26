@@ -1,9 +1,22 @@
 {
   "name": "refactor-agent-team",
-  "version": "1.0.0",
-  "description": "OpenCode plugin — multi-agent codebase refactoring system",
+  "version": "2.0.0",
+  "description": "OpenCode plugin — multi-agent codebase refactoring system. Analyst, Reviewer, Verifier, Leader agents with real LLM analysis.",
   "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "typecheck": "bun x tsc --noEmit",
+    "plugin:install": "mkdir -p ~/.config/opencode/plugins && cp -r . ~/.config/opencode/plugins/refactor-agent-team",
+    "prepublish": "bun x tsc --noEmit"
+  },
   "dependencies": {
     "@opencode-ai/plugin": "latest"
-  }
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7.0"
+  },
+  "keywords": ["opencode", "plugin", "code-review", "refactoring", "multi-agent", "code-analysis"],
+  "license": "MIT"
 }
