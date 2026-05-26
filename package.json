@@ -1,0 +1,9 @@
+{
+  "name": "refactor-agent-team",
+  "version": "1.0.0",
+  "description": "OpenCode plugin — multi-agent codebase refactoring system",
+  "type": "module",
+  "dependencies": {
+    "@opencode-ai/plugin": "latest"
+  }
+}
